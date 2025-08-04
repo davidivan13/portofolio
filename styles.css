@@ -51,11 +51,8 @@ nav {
 
 .nav-links li {
     margin-left: 0;
-    /* Menghilangkan margin kiri */
     width: 100%;
-    /* Memastikan lebar penuh */
     text-align: center;
-    /* Memusatkan teks */
 }
 
 .nav-links a {
@@ -64,13 +61,9 @@ nav {
     font-weight: 500;
     transition: color 0.3s;
     padding: 10px 15px;
-    /* Menambahkan padding untuk memperbesar area klik */
     display: block;
-    /* Mengubah tampilan menjadi block agar border berfungsi dengan baik */
     width: 100%;
-    /* Memastikan tautan mengisi seluruh lebar li */
     box-sizing: border-box;
-    /* Memastikan padding tidak menambah lebar */
 }
 
 .nav-links a:hover {
@@ -82,14 +75,11 @@ nav {
     .nav-links {
         display: flex;
         flex-direction: column;
-        /* Mengubah arah menjadi kolom */
     }
 
     .nav-links li {
         position: relative;
-        /* Menambahkan posisi relatif untuk pemisah */
         border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-        /* Garis pemisah di bawah untuk semua item */
     }
 
     .nav-links a {
@@ -98,13 +88,9 @@ nav {
         font-weight: 500;
         transition: color 0.3s;
         padding: 10px 15px;
-        /* Menambahkan padding untuk memperbesar area klik */
         display: block;
-        /* Mengubah tampilan menjadi block agar border berfungsi dengan baik */
         width: 100%;
-        /* Memastikan tautan mengisi seluruh lebar li */
         box-sizing: border-box;
-        /* Memastikan padding tidak menambah lebar */
     }
 
     .nav-links a:hover {
@@ -268,27 +254,68 @@ p {
 
 .btn-view {
     display: block;
-    /* Jadikan elemen block */
     width: 100%;
-    /* Penuhi lebar parent */
     padding: 0.75rem 1rem;
-    /* Ruang dalam tombol */
     text-align: center;
-    /* Pusatkan teks */
     background-color: #3498db;
-    /* Warna dasar */
     color: #fff;
-    /* Warna teks */
     border-radius: 4px;
-    /* Sudut membulat */
     text-decoration: none;
-    /* Hilangkan garis bawah */
     transition: background-color 0.3s;
 }
 
 .btn-view:hover {
     background-color: #2980b9;
-    /* Warna saat hover */
+}
+
+/* Sertifikat */
+.certificates {
+    background-color: white;
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.certificate-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.certificate-info {
+    padding: 1.5rem;
+}
+
+.certificate-info h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.certificate-info p {
+    color: #666;
+}
+
+/* Sertifikat */
+.certificate-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
 }
 
 /* Footer */
@@ -361,5 +388,65 @@ footer p {
 
     h2 {
         font-size: 1.8rem;
+    }
+}
+
+
+
+/* Header & Navigasi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #2c3e50;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 15px;
     }
 }
